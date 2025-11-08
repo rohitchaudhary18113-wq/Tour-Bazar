@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOUR BAZAR 24X7 | Dream Travels</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background, like e-commerce sites */
+            scroll-behavior: smooth;
+        }
+        /* Custom hero background image (Simulating a main rotating banner) */
+        .hero-bg {
+            /* Using a travel-themed placeholder with the brand orange accent */
+            background-image: url('https://placehold.co/1200x350/FF8C00/ffffff?text=TOUR+BAZAR+24X7+%7C+Find+Your+Next+Adventure');
+            background-size: cover;
+            background-position: center;
+        }
+        /* New Brand Accent Color */
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange from Logo */
+        }
+        /* Discount Green (Retained for high visibility on savings) */
+        .discount-badge {
+            background-color: #059669; 
+        }
+        /* Modal backdrop style */
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        /* Header Specific Styling */
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00', 
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Clean White with Logo and Accent) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Logo, Search, Account, Cart (Main Nav Bar) -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+                
+                <!-- Logo & Branding (Updated to include an image placeholder for Logo.jpg) -->
+                <div class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="C:\office\7\Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </div>
+
+                <!-- Search Bar (Wide and Prominent - Centered) -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <!-- Category Dropdown -->
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <!-- Search Button (Brand Accent Color) -->
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <a href="Login.html">
+                <!-- Utility Links / Login -->
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                    <!-- Account Link -->
+                    <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div>
+                    </a>
+
+                    <!-- Bookings Icon (Brand accent text) -->
+                    <a href="Booking.html" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 2: Secondary Navigation (Quick Links Bar) -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <!-- Hamburger/Category Menu -->
+                    <a href="C:\office\7\Shop All Tours.html" class="flex items-center text-brand-accent font-bold transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </a>
+                    <!-- Quick Links -->
+                    <a href="file:///C:/office/7/Hot%20Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="file:///C:/office/7/Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <a href="file:///C:/office/7/Honey.html" class="hover:text-brand-accent transition duration-150">Honeymoon Specials</a>
+                    <a href="file:///C:/office/7/Visa.html" class="hover:text-brand-accent transition duration-150">Visa Services</a>
+                    <a href="Insurance.html" class="hover:text-brand-accent transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content Container -->
+    <div class="max-w-7xl mx-auto">
+        <!-- Hero Section (Simulated Banner Area - uses brand accent color) -->
+        <section class="hero-bg h-[35vh] flex items-center justify-start p-4 mb-8 rounded-b-xl shadow-inner"></section>
+
+        <!-- Flash Sale / Limited Stock Section -->
+        <section class="px-4 sm:px-6 lg:px-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span class="text-brand-accent mr-2">⭐</span> Flash Deals: Limited Packages! 
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                
+                <!-- Deal Card 1 -->
+                <div class="bg-white rounded-xl shadow-md p-4 text-center transform hover:shadow-lg transition duration-300">
+                    <img src="C:\office\7\8.jpg" alt="Bali Deal" class="w-full h-auto rounded-md mb-3 object-cover">
+                    <p class="text-sm font-semibold text-gray-800 truncate">Bali Escape</p>
+                    <p class="text-xs text-gray-500 line-through">₹ 60,000</p>
+                    <p class="text-lg font-bold brand-accent">₹ 45,000</p>
+                    <span class="text-xs discount-badge text-white font-bold px-2 py-0.5 rounded-full inline-block mt-1">25% OFF</span>
+                </div>
+
+                <!-- Deal Card 2 -->
+                <div class="bg-white rounded-xl shadow-md p-4 text-center transform hover:shadow-lg transition duration-300">
+                    <img src="C:\office\7\8.jpg" alt="Thailand Deal" class="w-full h-auto rounded-md mb-3 object-cover">
+                    <p class="text-sm font-semibold text-gray-800 truncate">Thai Beaches</p>
+                    <p class="text-xs text-gray-500 line-through">₹ 45,000</p>
+                    <p class="text-lg font-bold brand-accent">₹ 29,999</p>
+                    <span class="text-xs discount-badge text-white font-bold px-2 py-0.5 rounded-full inline-block mt-1">33% OFF</span>
+                </div>
+                
+                <!-- Deal Card 3 -->
+                <div class="bg-white rounded-xl shadow-md p-4 text-center transform hover:shadow-lg transition duration-300">
+                    <img src="C:\office\7\8.jpg" alt="Dubai Deal" class="w-full h-auto rounded-md mb-3 object-cover">
+                    <p class="text-sm font-semibold text-gray-800 truncate">Dubai Luxury</p>
+                    <p class="text-xs text-gray-500 line-through">₹ 90,000</p>
+                    <p class="text-lg font-bold brand-accent">₹ 67,500</p>
+                    <span class="text-xs discount-badge text-white font-bold px-2 py-0.5 rounded-full inline-block mt-1">25% OFF</span>
+                </div>
+
+                <!-- Deal Card 4 -->
+                <div class="bg-white rounded-xl shadow-md p-4 text-center transform hover:shadow-lg transition duration-300 hidden lg:block">
+                    <img src="C:\office\7\8.jpg" alt="Europe Deal" class="w-full h-auto rounded-md mb-3 object-cover">
+                    <p class="text-sm font-semibold text-gray-800 truncate">7-Day EuroPass</p>
+                    <p class="text-xs text-gray-500 line-through">₹ 1,80,000</p>
+                    <p class="text-lg font-bold brand-accent">₹ 1,44,000</p>
+                    <span class="text-xs discount-badge text-white font-bold px-2 py-0.5 rounded-full inline-block mt-1">20% OFF</span>
+                </div>
+                
+                <!-- Deal Card 5 -->
+                <div class="bg-white rounded-xl shadow-md p-4 text-center transform hover:shadow-lg transition duration-300 hidden lg:block">
+                    <img src="C:\office\7\8.jpg" alt="India Deal" class="w-full h-auto rounded-md mb-3 object-cover">
+                    <p class="text-sm font-semibold text-gray-800 truncate">Golden Triangle Tour</p>
+                    <p class="text-xs text-gray-500 line-through">₹ 35,000</p>
+                    <p class="text-lg font-bold brand-accent">₹ 23,300</p>
+                    <span class="text-xs discount-badge text-white font-bold px-2 py-0.5 rounded-full inline-block mt-1">33% OFF</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Packages Section (Top Destinations - The Product Grid) -->
+        <section id="packages" class="py-12 bg-white rounded-t-xl shadow-inner">
+            <div class="px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Must-Book Tour Packages</h2>
+                <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">
+                    Trusted by thousands of customers, these are our top-rated, best-selling travel packages.
+                </p>
+
+                <!-- Packages Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                    <!-- Package 1: Maldives Bliss -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300">
+                        <img src="C:\office\7\8.jpg" alt="Maldives Destination" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-1 truncate">Maldives Island Retreat</h3>
+                            
+                            <!-- Star Rating (E-commerce feature) -->
+                            <div class="flex items-center text-sm text-yellow-500 mb-2">
+                                <span class="mr-1">★★★★★</span>
+                                <span class="text-gray-500 text-xs">(1,245 reviews)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-600 mb-3">7 Days / 6 Nights, All-Inclusive</p>
+                            
+                            <!-- Price Block -->
+                            <div class="flex flex-col items-start space-y-1 mb-3">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    <span class="brand-accent">₹ 3,80,000</span>
+                                </span>
+                                <span class="text-xs text-gray-500">
+                                    <span class="line-through mr-1">₹ 4,50,000</span> (15% off)
+                                </span>
+                            </div>
+                            
+                            <button onclick="openQuoteModal('Maldives Island Retreat', '₹ 3,80,000')" class="w-full py-2 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300 text-sm shadow-md">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Package 2: Parisian Romance -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300">
+                        <img src="C:\office\7\8.jpg" alt="Paris Destination" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-1 truncate">Paris & French Riviera</h3>
+                            <div class="flex items-center text-sm text-yellow-500 mb-2">
+                                <span class="mr-1">★★★★☆</span>
+                                <span class="text-gray-500 text-xs">(890 reviews)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-600 mb-3">5 Days / 4 Nights, Boutique Hotels</p>
+                            
+                            <!-- Price Block -->
+                            <div class="flex flex-col items-start space-y-1 mb-3">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    <span class="brand-accent">₹ 1,99,000</span>
+                                </span>
+                                <span class="text-xs text-gray-500">
+                                    <span class="line-through mr-1">₹ 2,25,000</span> (11% off)
+                                </span>
+                            </div>
+                            
+                            <button onclick="openQuoteModal('Paris & French Riviera', '₹ 1,99,000')" class="w-full py-2 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300 text-sm shadow-md">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Package 3: Italian Coastal Dream -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300">
+                        <img src="C:\office\7\8.jpg" alt="Amalfi Coast Destination" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-1 truncate">Amalfi Coast Road Trip</h3>
+                            <div class="flex items-center text-sm text-yellow-500 mb-2">
+                                <span class="mr-1">★★★★★</span>
+                                <span class="text-gray-500 text-xs">(2,100 reviews)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-600 mb-3">9 Days / 8 Nights, Guided Tour</p>
+                            
+                            <!-- Price Block -->
+                            <div class="flex flex-col items-start space-y-1 mb-3">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    <span class="brand-accent">₹ 3,45,000</span>
+                                </span>
+                                <span class="text-xs text-gray-500">
+                                    <span class="line-through mr-1">₹ 3,80,000</span> (9% off)
+                                </span>
+                            </div>
+                            
+                            <button onclick="openQuoteModal('Amalfi Coast Road Trip', '₹ 3,45,000')" class="w-full py-2 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300 text-sm shadow-md">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Package 4: Vietnam & Cambodia -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300">
+                        <img src="C:\office\7\8.jpg" alt="Vietnam Destination" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-1 truncate">Vietnam & Cambodia Explorer</h3>
+                            <div class="flex items-center text-sm text-yellow-500 mb-2">
+                                <span class="mr-1">★★★★☆</span>
+                                <span class="text-gray-500 text-xs">(450 reviews)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-600 mb-3">8 Days / 7 Nights, Heritage Sites</p>
+                            
+                            <!-- Price Block -->
+                            <div class="flex flex-col items-start space-y-1 mb-3">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    <span class="brand-accent">₹ 1,15,000</span>
+                                </span>
+                                <span class="text-xs text-gray-500">
+                                    <span class="line-through mr-1">₹ 1,40,000</span> (18% off)
+                                </span>
+                            </div>
+                            
+                            <button onclick="openQuoteModal('Vietnam & Cambodia Explorer', '₹ 1,15,000')" class="w-full py-2 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300 text-sm shadow-md">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom CTA (Similar to e-commerce recommendations) -->
+        <div class="text-center my-16 p-8 bg-brand-accent/10 rounded-xl border border-brand-accent/30 mx-4 sm:mx-6 lg:mx-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Can't Find Your Dream Trip?</h3>
+            <p class="text-gray-700 mb-5">Our 24X7 experts are ready to craft a custom package just for you.</p>
+            <button onclick="openQuoteModal('Custom Package', 'N/A')" class="inline-block px-8 py-3 bg-brand-accent text-white font-bold rounded-lg shadow-xl hover:bg-yellow-600 transition duration-300">
+                Start Custom Inquiry
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Footer (E-commerce Multi-column Footer) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --------------------------------- -->
+    <!-- CHAT WIDGET IMPLEMENTATION START -->
+    <!-- --------------------------------- -->
+
+    <!-- Fixed Chat Button (Always Visible when chat window is hidden) -->
+    <button id="chat-toggle-btn" class="fixed bottom-6 right-6 z-30 p-4 rounded-full bg-brand-accent text-white shadow-2xl hover:bg-yellow-600 transition transform hover:scale-105" aria-label="Open Chat Support">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.124A8.905 8.905 0 0012 3c4.97 0 9 3.582 9 8z"></path></svg>
+    </button>
+
+    <!-- Chat Popup Window (Hidden by default) -->
+    <div id="chat-window" class="hidden fixed bottom-[90px] right-6 z-30 w-80 h-[400px] bg-white rounded-xl shadow-2xl flex flex-col overflow-hidden border-2 border-brand-accent transform transition-transform duration-300 scale-90 md:scale-100">
+        <!-- Header -->
+        <div class="p-3 bg-brand-accent text-white flex justify-between items-center shadow-md">
+            <div class="font-bold">Live Travel Support</div>
+            <button id="chat-close-btn" class="text-white opacity-90 hover:opacity-100 transition" aria-label="Close Chat Window">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <!-- Messages (Mock Content) -->
+        <div class="flex-1 p-4 overflow-y-auto space-y-3 bg-gray-50">
+            <!-- System Message -->
+            <div class="flex justify-start">
+                <div class="bg-gray-200 text-gray-800 p-3 rounded-t-xl rounded-br-xl max-w-[80%] shadow-sm text-sm">
+                    Hi there! I'm your 24X7 Travel Assistant. How can I help you book your next amazing trip?
+                </div>
+            </div>
+            <!-- User Message -->
+            <div class="flex justify-end">
+                <div class="bg-blue-500 text-white p-3 rounded-t-xl rounded-bl-xl max-w-[80%] shadow-md text-sm">
+                    I need a quick quote for the Maldives package and need details on visa processing.
+                </div>
+            </div>
+        </div>
+        <!-- Input Field -->
+        <div class="p-3 border-t border-gray-200 bg-white">
+            <div class="flex space-x-2">
+                <input type="text" placeholder="Type your message..." class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-accent transition">
+                <button class="bg-brand-accent text-white p-2 rounded-lg hover:bg-yellow-600 transition" aria-label="Send Message">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3v8l15 1 1-1-16 1V21z"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------- -->
+    <!-- CHAT WIDGET IMPLEMENTATION END -->
+    <!-- --------------------------------- -->
+
+
+    <!-- Quote Request Modal (Existing Modal) -->
+    <div id="quoteModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-backdrop transition-opacity duration-300" onclick="closeQuoteModal(event)">
+        
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-lg m-4 p-6 md:p-8 transform transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900" id="modalTitle">Inquiry for Booking</h3>
+                <button onclick="closeQuoteModal()" class="text-gray-400 hover:text-gray-600 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <form id="quoteForm" class="space-y-4">
+                <p class="text-sm text-gray-600 mb-4">You are inquiring about: <span id="packageNameDisplay" class="font-semibold text-brand-accent">Maldives Island Retreat</span>. Please provide your details below.</p>
+                
+                <input type="hidden" id="packageInput" name="package_name">
+
+                <!-- Status Message -->
+                <div id="quoteStatusMessage" class="hidden p-3 rounded-lg text-sm font-medium"></div>
+                
+                <!-- Name Field -->
+                <div>
+                    <label for="quote_name" class="block text-sm font-medium text-gray-700">Your Full Name</label>
+                    <input type="text" id="quote_name" name="name" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                </div>
+                
+                <!-- Email Field -->
+                <div>
+                    <label for="quote_email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="quote_email" name="email" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                </div>
+
+                <!-- Date Preference -->
+                <div>
+                    <label for="quote_date" class="block text-sm font-medium text-gray-700">Preferred Travel Date (Approx)</label>
+                    <input type="date" id="quote_date" name="date" class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="quoteSubmitButton" class="w-full py-2.5 px-4 bg-brand-accent text-white font-bold rounded-lg shadow-xl hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-brand-accent/50 transition duration-300">
+                    Confirm Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        // Global variables for the modal elements
+        const modal = document.getElementById('quoteModal');
+        const packageNameDisplay = document.getElementById('packageNameDisplay');
+        const packageInput = document.getElementById('packageInput');
+        const quoteForm = document.getElementById('quoteForm');
+        const quoteStatusMessage = document.getElementById('quoteStatusMessage');
+        const quoteSubmitButton = document.getElementById('quoteSubmitButton');
+
+        // --- Existing Quote Modal Functions ---
+
+        // Function to show status messages in the modal
+        const showQuoteStatus = (message, type = 'success') => {
+            quoteStatusMessage.textContent = message;
+            quoteStatusMessage.className = 'p-3 rounded-lg text-sm font-medium mt-4';
+            
+            // Clear all color classes first
+            quoteStatusMessage.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800', 'bg-blue-100', 'text-blue-800');
+
+            if (type === 'success') {
+                quoteStatusMessage.classList.add('bg-green-100', 'text-green-800');
+            } else if (type === 'error') {
+                quoteStatusMessage.classList.add('bg-red-100', 'text-red-800');
+            } else {
+                // Info/Processing
+                quoteStatusMessage.classList.add('bg-blue-100', 'text-blue-800');
+            }
+        };
+
+        // Function to open the quote modal
+        function openQuoteModal(packageName, price) {
+            packageNameDisplay.textContent = packageName;
+            packageInput.value = packageName; // Set hidden input for form submission
+            
+            // Reset form and clear status message
+            quoteForm.reset();
+            quoteStatusMessage.classList.add('hidden');
+            quoteSubmitButton.disabled = false;
+            quoteSubmitButton.textContent = 'Confirm Inquiry';
+
+            // Show the modal
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Prevent background scrolling
+        }
+
+        // Function to close the quote modal
+        function closeQuoteModal(event = null) {
+            // Check if the click was on the backdrop or the close button
+            if (!event || event.target === modal || event.target.closest('button')) {
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        // Handle the quote form submission
+        quoteForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            quoteSubmitButton.disabled = true;
+            quoteSubmitButton.textContent = 'Processing...';
+
+            // Gather form data
+            const formData = new FormData(quoteForm);
+            const data = Object.fromEntries(formData.entries());
+            
+            // --- Mock API Call for Demonstration ---
+            showQuoteStatus("Submitting your request for " + data.package_name + "...", 'info'); 
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate network delay
+
+            console.log("Quote Request Submitted:", data);
+
+            // Mock success response
+            showQuoteStatus(`Thank you, ${data.name}! We will review your inquiry for ${data.package_name} and contact you at ${data.email} within 24 hours.`, 'success');
+
+            // Update button text after success simulation
+            quoteSubmitButton.textContent = 'Inquiry Sent!';
+            // The modal will not close automatically here so the user can see the confirmation.
+        });
+        
+        
+        // --- NEW Chat Widget Logic ---
+        
+        const chatButton = document.getElementById('chat-toggle-btn');
+        const chatWindow = document.getElementById('chat-window');
+        const chatCloseButton = document.getElementById('chat-close-btn');
+
+        // Open chat window and hide the button
+        chatButton.addEventListener('click', () => {
+            chatWindow.classList.remove('hidden');
+            chatButton.classList.add('hidden'); 
+        });
+
+        // Close chat window and show the button
+        chatCloseButton.addEventListener('click', () => {
+            chatWindow.classList.add('hidden');
+            chatButton.classList.remove('hidden'); 
+        });
+        
+    </script>
+</body>
+</html>

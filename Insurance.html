@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Insurance | Protect Your Trip | TOUR BAZAR 24X7</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background */
+            scroll-behavior: smooth;
+        }
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange */
+        }
+        .bg-brand-accent {
+            background-color: #FF8C00;
+        }
+        .hover\:bg-yellow-600:hover {
+            background-color: #D97706; /* Slightly darker orange */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .plan-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(255, 140, 0, 0.1), 0 4px 6px -4px rgba(255, 140, 0, 0.1);
+            border-color: #FF8C00;
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Standardized) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Logo, Search, Account, Bookings (Primary Nav Bar) -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+
+                <!-- Logo & Branding -->
+                <a href="tour_bazar_24x7.html" class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </a>
+
+                <!-- Search Bar (Wide and Prominent - Centered) -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Utility Links / Login --> 
+                 <a href="Login.html">
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                     <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div></a>
+
+                    <!-- BOOKINGS LINK -->
+                    <a href="Booking.html" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Secondary Navigation (Highlighting Travel Insurance) -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <a href="Home.html" class="hover:text-brand-accent transition duration-150">Home</a>
+                    <a href="Shop All Tours.html" class="flex items-center hover:text-brand-accent transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </a>
+                    <a href="Hot Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <a href="Honey.html" class="hover:text-brand-accent transition duration-150">Honeymoon Specials</a>
+                    <!-- Updated the Visa Service link to point to its file and removed the highlight -->
+                    <a href="Visa.html" class="hover:text-brand-accent transition duration-150">Visa Services</a>
+                    <!-- Highlighted the current page: Travel Insurance -->
+                    <a href="Insurance.html" class="text-brand-accent font-bold transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Insurance Hero Section & Quote Form -->
+        <div class="text-center bg-white p-8 sm:p-12 rounded-2xl shadow-xl mb-12 border border-gray-100">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">
+                Travel Peace of Mind. <span class="brand-accent">Guaranteed.</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Compare and buy the perfect travel insurance plan in minutes. Protect against medical emergencies, cancellations, and lost luggage.
+            </p>
+
+            <!-- Quick Quote Form -->
+            <form class="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+                <div class="md:col-span-2">
+                    <select class="w-full py-3 px-4 bg-gray-50 text-gray-800 rounded-lg border-2 border-gray-200 focus:border-brand-accent focus:ring-1 transition cursor-pointer" required>
+                        <option value="" disabled selected>Destination Country</option>
+                        <option value="us">United States</option>
+                        <option value="schengen">Schengen Area (EU)</option>
+                        <option value="asia">Southeast Asia</option>
+                    </select>
+                </div>
+                <input type="date" class="w-full py-3 px-4 bg-gray-50 text-gray-800 rounded-lg border-2 border-gray-200 focus:border-brand-accent focus:ring-1 transition" placeholder="Start Date" required/>
+                <input type="date" class="w-full py-3 px-4 bg-gray-50 text-gray-800 rounded-lg border-2 border-gray-200 focus:border-brand-accent focus:ring-1 transition" placeholder="End Date" required/>
+                <button type="submit" class="w-full py-3 px-4 bg-brand-accent text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300 shadow-md">
+                    Get Quotes
+                </button>
+            </form>
+        </div>
+
+        <!-- Section 2: Core Insurance Benefits -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Comprehensive Coverage for Every Journey</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Benefit 1: Emergency Medical -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <svg class="w-12 h-12 brand-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938-1.5a6 6 0 1113.844 0M3 20h18a1 1 0 001-1v-4a1 1 0 00-1-1H3a1 1 0 00-1 1v4a1 1 0 001 1z"></path></svg>
+                    <h3 class="text-xl font-bold mb-2">Emergency Medical</h3>
+                    <p class="text-gray-600 text-sm">Up to $500,000 for hospital stays, doctor visits, and emergency evacuation. 24/7 global support.</p>
+                </div>
+
+                <!-- Benefit 2: Trip Cancellation/Interruption -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <svg class="w-12 h-12 brand-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <h3 class="text-xl font-bold mb-2">Cancellation & Delay</h3>
+                    <p class="text-gray-600 text-sm">Reimbursement for non-refundable expenses if your trip is canceled or cut short due to covered reasons.</p>
+                </div>
+
+                <!-- Benefit 3: Baggage & Personal Belongings -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <svg class="w-12 h-12 brand-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7m16 0-8 4M4 7v10m0 0l4-4m4 4l4-4"></path></svg>
+                    <h3 class="text-xl font-bold mb-2">Baggage Loss</h3>
+                    <p class="text-gray-600 text-sm">Coverage for delayed, lost, or damaged luggage, passports, and essential travel documents.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Insurance Plan Types -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Choose the Right Plan for You</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Plan 1: Single Trip Plan -->
+                <div class="plan-card bg-white p-8 rounded-xl border-2 border-gray-200 shadow-lg transition duration-300 cursor-pointer">
+                    <h3 class="text-2xl font-bold brand-accent mb-2">Single Trip</h3>
+                    <p class="text-gray-600 mb-4">Perfect for one-off vacations, short getaways, or business travel. Covers up to 90 days.</p>
+                    <ul class="space-y-2 text-sm text-gray-700 list-none mb-6">
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Comprehensive Medical Cover</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Default Luggage Protection</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>24-Hour Emergency Hotline</li>
+                    </ul>
+                    <button class="w-full py-3 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300 shadow-md">
+                        View & Buy Now
+                    </button>
+                </div>
+
+                <!-- Plan 2: Annual Multi-Trip Plan (Recommended) -->
+                <div class="plan-card bg-brand-accent/10 p-8 rounded-xl border-2 border-brand-accent shadow-2xl transition duration-300 cursor-pointer relative">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">BEST VALUE</div>
+                    <h3 class="text-2xl font-bold brand-accent mb-2">Annual Multi-Trip</h3>
+                    <p class="text-gray-600 mb-4">Ideal for frequent travelers. Unlimited trips over 12 months (up to 30 days per trip).</p>
+                    <ul class="space-y-2 text-sm text-gray-700 list-none mb-6">
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>High Medical Limits</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Extended Trip Delay Coverage</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Covers Multiple Destinations</li>
+                    </ul>
+                    <button class="w-full py-3 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300 shadow-xl">
+                        View & Buy Now
+                    </button>
+                </div>
+
+                <!-- Plan 3: Group & Family Plan -->
+                <div class="plan-card bg-white p-8 rounded-xl border-2 border-gray-200 shadow-lg transition duration-300 cursor-pointer">
+                    <h3 class="text-2xl font-bold brand-accent mb-2">Group & Family</h3>
+                    <p class="text-gray-600 mb-4">Simplified coverage for 2 or more travelers going together. Discounted rates apply.</p>
+                    <ul class="space-y-2 text-sm text-gray-700 list-none mb-6">
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Includes Children Free (T&C)</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Single Policy, Single Claim</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Covers Cruise & Adventure</li>
+                    </ul>
+                    <button class="w-full py-3 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300 shadow-md">
+                        View & Buy Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Claims and Contact CTA -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- File a Claim -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <h3 class="text-2xl font-bold brand-accent mb-3">Need to File a Claim?</h3>
+                <p class="text-gray-600 mb-4">Our claims process is fast and straightforward. Start your submission online or call our 24/7 helpline.</p>
+                <a href="#" class="inline-flex items-center py-2 px-4 bg-brand-accent text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    Start Online Claim
+                </a>
+            </div>
+
+            <!-- Global Support -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <h3 class="text-2xl font-bold brand-accent mb-3">Global Emergency Support</h3>
+                <p class="text-gray-600 mb-4">Available 24 hours a day, 7 days a week, wherever you are in the world.</p>
+                <div class="text-xl font-bold text-gray-900 flex items-center">
+                    <svg class="w-6 h-6 brand-accent mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.12-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.2c.27-.27.36-.66.24-1.01C8.75 6.45 8.55 5.25 8.55 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.55c0-.55-.45-1-1-1z"/></svg>
+                    +1-800-555-TOUR
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- END OF MAIN CONTENT -->
+
+    <!-- Footer (Standardized) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

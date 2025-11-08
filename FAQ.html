@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ, Cancellation & Travel Guides | TOUR BAZAR 24X7</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background */
+            scroll-behavior: smooth;
+        }
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange */
+        }
+        .bg-brand-accent {
+            background-color: #FF8C00;
+        }
+        .hover\:bg-yellow-600:hover {
+            background-color: #D97706; /* Slightly darker orange */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        /* Style for the FAQ Accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding-top 0.4s ease-in-out;
+            padding-top: 0;
+        }
+        .faq-question {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .faq-question:hover {
+            background-color: #fef3e3; /* Light orange hover */
+        }
+        .faq-question.active {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Standardized - Same as other pages) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Logo, Search, Account, Bookings (Primary Nav Bar) -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+
+                <!-- Logo & Branding -->
+                <a href="tour_bazar_24x7.html" class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </a>
+
+                <!-- Search Bar (Wide and Prominent - Centered) -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Utility Links / Login --> 
+                 <a href="Login.html">
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                     <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div></a>
+
+                    <!-- BOOKINGS LINK -->
+                    <a href="Booking.html" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Secondary Navigation (Highlighting FAQ & Guides) -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <a href="Home.html" class="hover:text-brand-accent transition duration-150">Home</a>
+                    <a href="Shop All Tours.html" class="flex items-center hover:text-brand-accent transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </a>
+                    <a href="Hot Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <a href="Honey.html" class="hover:text-brand-accent transition duration-150">Honeymoon Specials</a>
+                    <a href="Visa.html" class="hover:text-brand-accent transition duration-150">Visa Services</a>
+                    <a href="Insurance.html" class="hover:text-brand-accent transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">
+                Answers, <span class="brand-accent">Guidance,</span> and Policies
+            </h1>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                Everything you need to know about booking, managing your trip, and our policies.
+            </p>
+        </div>
+
+        <!-- Section 1: Cancellation and Refund Policy -->
+        <section class="mb-12" id="cancellation-policy">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 pb-2 brand-accent">Cancellation Policy & Refunds</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <p class="text-lg text-gray-700 mb-6">
+                    Our cancellation policy is based on the type of booking (Tour Package, Flight, or Hotel) and the proximity to the departure date. **Standard cancellation fees apply** to cover non-refundable deposits made to our vendors.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <!-- Policy Block 1 -->
+                    <div class="p-4 rounded-lg bg-gray-50 border border-gray-200">
+                        <h4 class="text-2xl font-bold brand-accent mb-1">31+ Days Out</h4>
+                        <p class="text-sm text-gray-600">Full refund, minus a small administrative fee (5-10% of total tour cost).</p>
+                    </div>
+                    <!-- Policy Block 2 -->
+                    <div class="p-4 rounded-lg bg-gray-50 border border-gray-200">
+                        <h4 class="text-2xl font-bold brand-accent mb-1">15-30 Days Out</h4>
+                        <p class="text-sm text-gray-600">50% of the total cost is non-refundable, reflecting vendor commitments.</p>
+                    </div>
+                    <!-- Policy Block 3 -->
+                    <div class="p-4 rounded-lg bg-gray-50 border border-gray-200">
+                        <h4 class="text-2xl font-bold brand-accent mb-1">Less than 14 Days</h4>
+                        <p class="text-sm text-gray-600">100% of the total cost is non-refundable. We recommend travel insurance.</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-center md:text-left">
+                    <p class="text-sm text-gray-500 mb-4">
+                        *Note: Specific airlines, non-refundable hotel rooms, and visa fees have separate policies defined at the time of booking. Always check your booking confirmation for details.
+                    </p>
+                    <a href="#" class="inline-flex items-center py-2 px-6 bg-brand-accent text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300">
+                        Read Full Legal Terms
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Frequently Asked Questions (FAQ) -->
+        <section class="mb-12" id="faq-section">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 pb-2 brand-accent">Frequently Asked Questions</h2>
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 divide-y divide-gray-200">
+
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <div class="faq-question flex justify-between items-center p-5 rounded-t-2xl">
+                        <h3 class="text-lg font-semibold text-gray-900">How do I manage or modify an existing booking?</h3>
+                        <span class="toggle-icon text-2xl font-bold brand-accent transition duration-300">+</span>
+                    </div>
+                    <div class="faq-answer px-5 text-gray-600">
+                        <p class="pb-5">You can manage most aspects of your trip, including date changes and traveler details, through the "Your Bookings" link in the header. For major changes to package tours, please contact our 24/7 support line with your booking reference number. Note that modifications may incur fees depending on the supplier's policy.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <div class="faq-question flex justify-between items-center p-5">
+                        <h3 class="text-lg font-semibold text-gray-900">What is included in a typical 'All-Inclusive' package?</h3>
+                        <span class="toggle-icon text-2xl font-bold brand-accent transition duration-300">+</span>
+                    </div>
+                    <div class="faq-answer px-5 text-gray-600">
+                        <p class="pb-5">Our all-inclusive packages typically cover flights, accommodation, all meals (breakfast, lunch, and dinner), and local transportation as specified in the itinerary. They often include select activities and drinks. Always check the "Inclusions" section on the package detail page to confirm exactly what is covered, as offerings vary by destination and vendor.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <div class="faq-question flex justify-between items-center p-5">
+                        <h3 class="text-lg font-semibold text-gray-900">Do I need a visa or travel insurance for my destination?</h3>
+                        <span class="toggle-icon text-2xl font-bold brand-accent transition duration-300">+</span>
+                    </div>
+                    <div class="faq-answer px-5 text-gray-600">
+                        <p class="pb-5">Visa requirements depend on your passport's nationality and your destination country. We highly recommend visiting our **Visa Services** page for guidance. While travel insurance is often optional, we strongly advise purchasing it to protect against medical emergencies, cancellations, and lost baggage. You can compare plans on our **Travel Insurance** page.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <div class="faq-question flex justify-between items-center p-5 rounded-b-2xl">
+                        <h3 class="text-lg font-semibold text-gray-900">What payment methods do you accept?</h3>
+                        <span class="toggle-icon text-2xl font-bold brand-accent transition duration-300">+</span>
+                    </div>
+                    <div class="faq-answer px-5 text-gray-600">
+                        <p class="pb-5">We accept all major credit and debit cards (Visa, Mastercard, Amex), net banking, and various UPI/digital wallet options for your convenience. All transactions are secured using industry-standard encryption.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: General Travel Guidance -->
+        <section id="travel-guidance">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 pb-2 brand-accent">Essential Travel Guidance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Guide 1: Packing -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold brand-accent mb-2">Smart Packing Tips</h3>
+                    <p class="text-gray-600 text-sm">Always pack a small medical kit and a change of clothes in your carry-on. Use packing cubes to maximize space and organization. Remember adapters!</p>
+                </div>
+                <!-- Guide 2: Local Currency -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold brand-accent mb-2">Currency & Budgeting</h3>
+                    <p class="text-gray-600 text-sm">Inform your bank of your travel dates to avoid card freezing. Use local ATMs for the best exchange rates, and carry small amounts of local cash for markets.</p>
+                </div>
+                <!-- Guide 3: Safety -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold brand-accent mb-2">Safety on the Road</h3>
+                    <p class="text-gray-600 text-sm">Share your itinerary with a family member. Always use reputable, licensed taxis or ride-share services. Keep copies of important documents separate from the originals.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- END OF MAIN CONTENT -->
+
+    <!-- Footer (Standardized - Same as other pages) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const questions = document.querySelectorAll('.faq-question');
+
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('.toggle-icon');
+
+                    // Check if the current question is already active
+                    const isActive = question.classList.contains('active');
+
+                    // Close all other active answers
+                    questions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            otherQuestion.classList.remove('active');
+                            const otherAnswer = otherQuestion.nextElementSibling;
+                            const otherIcon = otherQuestion.querySelector('.toggle-icon');
+                            otherAnswer.style.maxHeight = null;
+                            otherAnswer.style.paddingTop = '0';
+                            otherIcon.innerHTML = '+';
+                        }
+                    });
+
+                    // Toggle the clicked answer
+                    if (!isActive) {
+                        question.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        answer.style.paddingTop = '1rem'; /* Equivalent to Tailwind pt-4 */
+                        icon.innerHTML = '–'; // En dash for cleaner look
+                    } else {
+                        question.classList.remove('active');
+                        answer.style.maxHeight = null;
+                        answer.style.paddingTop = '0';
+                        icon.innerHTML = '+';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honeymoon Special | Luxury Romantic Tours | TOUR BAZAR 24X7</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background */
+            scroll-behavior: smooth;
+        }
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange */
+        }
+        .bg-brand-accent {
+            background-color: #FF8C00;
+        }
+        .hover\:bg-yellow-600:hover {
+            background-color: #D97706; /* Slightly darker orange */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .luxury-badge {
+            background-color: #A52A2A; /* Deep Red/Maroon for Luxury/Romance */
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00', 
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Identical to other pages, with active link updated) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Logo, Search, Account, Bookings (Primary Nav Bar) -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+                
+                <!-- Logo & Branding -->
+                <a href="tour_bazar_24x7.html" class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="C:\office\7\Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </a>
+
+                <!-- Search Bar (Wide and Prominent - Centered) -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <!-- Category Dropdown -->
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <!-- Search Button (Brand Accent Color) -->
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Utility Links / Login --> <a href="Login.html">
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                     <!-- Account Link -->
+                    <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div> </a>
+
+                    <!-- Bookings Icon (Brand accent text) -->
+                    <a href="Booking.html" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 2: Secondary Navigation (Highlighting current page) -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <a href="file:///C:/office/7/Home.html" class="hover:text-brand-accent transition duration-150">Home</a>
+                    <a href="file:///C:/office/7/Shop%20All%20Tours.html" class="flex items-center hover:text-brand-accent transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </a>
+                    <a href="file:///C:/office/7/Hot%20Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="file:///C:/office/7/Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <span class="text-brand-accent font-bold transition duration-150">Honeymoon Specials</span>
+                    <a href="file:///C:/office/7/Visa.html" class="hover:text-brand-accent transition duration-150">Visa Services</a>
+                    <a href="Insurance.html" class="hover:text-brand-accent transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-2">🥂 Honeymoon Specials: Your Romantic Journey</h1>
+        <p class="text-xl text-gray-600 mb-8">Exclusive luxury packages in the world's most romantic destinations.</p>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap gap-3 mb-8 border-b border-gray-200 pb-4">
+            <button class="filter-btn bg-brand-accent text-white px-5 py-2 rounded-full font-semibold shadow-md transition duration-200" data-filter="all">All Packages</button>
+            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-200" data-filter="Maldives">Maldives</button>
+            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-200" data-filter="Bora Bora">Bora Bora</button>
+            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-200" data-filter="Italy">Italy</button>
+            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-200" data-filter="Bali">Bali</button>
+            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-200" data-filter="India">India (Goa, Udaipur, Kerala)</button>
+        </div>
+
+        <div class="mb-4 text-sm text-gray-600">
+            <span id="package-count" class="font-bold text-gray-800">22</span> packages found.
+        </div>
+        
+        <!-- Honeymoon Tour Grid -->
+        <div id="tour-packages-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Honeymoon cards will be rendered here by JavaScript -->
+        </div>
+
+        <div id="no-results" class="hidden text-center p-12 bg-pink-50 rounded-xl mt-10 border border-pink-200">
+            <h3 class="text-xl font-semibold text-pink-700">No Romantic Packages Found for this Destination</h3>
+            <p class="text-gray-500 mt-2">Try selecting 'All Packages' or customize your request.</p>
+        </div>
+    </div>
+
+
+    <!-- Footer (Identical to other pages) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="file:///C:/office/7/Get%20to%20know%20us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="file:///C:/office/7/Get%20to%20know%20us.html" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="file:///C:/office/7/Get%20to%20know%20us.html" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- 22 Mock Honeymoon Tour Package Data ---
+        const allPackages = [
+            // Maldives (5 Packages)
+            { id: 1, title: "Maldives Overwater Bliss: All-Inclusive", location: "Malé Atoll, Maldives", duration: "6 Nights", price: 380000, theme: "Water Villa, Private Dining", destination: "Maldives" },
+            { id: 2, title: "Underwater Honeymoon Suite Experience", location: "Baa Atoll, Maldives", duration: "4 Nights", price: 550000, theme: "Unique Stay, Snorkeling", destination: "Maldives" },
+            { id: 3, title: "Sunset Cruise & Sandbank Picnic", location: "Ari Atoll, Maldives", duration: "7 Nights", price: 320000, theme: "Relaxation, Beachfront", destination: "Maldives" },
+            { id: 4, title: "Luxury Yachting Honeymoon Adventure", location: "North Malé Atoll, Maldives", duration: "5 Nights", price: 410000, theme: "Adventure, Private Yacht", destination: "Maldives" },
+            { id: 5, title: "Seaplane Transfers & 5-Star Retreat", location: "Addu Atoll, Maldives", duration: "8 Nights", price: 490000, theme: "Seclusion, Premium Spa", destination: "Maldives" },
+            
+            // Bora Bora (4 Packages)
+            { id: 6, title: "Bora Bora: Mount Otemanu Views & Lagoon", location: "Vaitape, Bora Bora", duration: "7 Nights", price: 520000, theme: "Overwater Bungalow, Hiking", destination: "Bora Bora" },
+            { id: 7, title: "Sharks, Rays & Private Motu Escape", location: "Bora Bora Lagoon, French Polynesia", duration: "5 Nights", price: 430000, theme: "Water Sports, Wildlife", destination: "Bora Bora" },
+            { id: 8, title: "Tahitian Pearl & Polynesian Spa Rituals", location: "Bora Bora, French Polynesia", duration: "6 Nights", price: 470000, theme: "Culture, Spa", destination: "Bora Bora" },
+            { id: 9, title: "Sunset Catamaran Sail & Champagne", location: "Motu Mute, Bora Bora", duration: "8 Nights", price: 600000, theme: "Ultimate Luxury, All-Inclusive", destination: "Bora Bora" },
+
+            // Italy (4 Packages)
+            { id: 10, title: "Venice Gondola Serenade & Rome History", location: "Venice & Rome, Italy", duration: "9 Days", price: 280000, theme: "Culture, Sightseeing", destination: "Italy" },
+            { id: 11, title: "Amalfi Coast Romantic Road Trip", location: "Positano, Amalfi, Italy", duration: "7 Days", price: 310000, theme: "Scenic Drives, Fine Dining", destination: "Italy" },
+            { id: 12, title: "Tuscan Wine Estate & Cooking Class", location: "Florence & Tuscany, Italy", duration: "10 Days", price: 350000, theme: "Gourmet, Wine Tasting", destination: "Italy" },
+            { id: 13, title: "Lake Como Villa & Private Boat Tour", location: "Lake Como, Italy", duration: "5 Days", price: 295000, theme: "Exclusive Villa, Lakeside", destination: "Italy" },
+
+            // Bali (3 Packages)
+            { id: 14, title: "Bali Ubud Rice Paddy Retreat & Spa", location: "Ubud, Bali, Indonesia", duration: "6 Nights", price: 170000, theme: "Wellness, Culture", destination: "Bali" },
+            { id: 15, title: "Nusa Dua Beach & Candlelight Dinner", location: "Nusa Dua, Bali, Indonesia", duration: "5 Nights", price: 155000, theme: "Beach Resort, Relaxation", destination: "Bali" },
+            { id: 16, title: "Bali & Gili Islands Snorkel Getaway", location: "Bali & Gili Trawangan", duration: "7 Nights", price: 190000, theme: "Island Hopping, Water Activities", destination: "Bali" },
+
+            // India (6 Packages)
+            { id: 17, title: "Royal Mewar Palace Experience", location: "Udaipur, Rajasthan, India", duration: "4 Nights", price: 120000, theme: "Palace Stay, Heritage", destination: "India" },
+            { id: 18, title: "Goa Beachfront & Casino Romantic Stay", location: "Goa (North & South), India", duration: "5 Nights", price: 75000, theme: "Beaches, Nightlife", destination: "India" },
+            { id: 19, title: "Kerala Houseboat & Tea Plantation Tour", location: "Alleppey & Munnar, Kerala, India", duration: "6 Nights", price: 95000, theme: "Backwaters, Nature", destination: "India" },
+            { id: 20, title: "Desert Tent & Stargazing Luxury", location: "Jaisalmer, Rajasthan, India", duration: "3 Nights", price: 85000, theme: "Adventure, Desert", destination: "India" },
+            { id: 21, title: "Golden Triangle with Agra Sunset", location: "Delhi, Agra, Jaipur, India", duration: "7 Nights", price: 110000, theme: "Monuments, History", destination: "India" },
+            { id: 22, title: "Andaman Islands Scuba & Beach", location: "Port Blair & Havelock, India", duration: "5 Nights", price: 135000, theme: "Beaches, Scuba Diving", destination: "India" },
+        ];
+
+
+        const tourGrid = document.getElementById('tour-packages-grid');
+        const packageCountSpan = document.getElementById('package-count');
+        const noResultsDiv = document.getElementById('no-results');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        // --- Rendering Functions ---
+
+        // Function to render a single tour package card
+        const renderPackageCard = (pkg) => {
+            const priceFormatted = pkg.price.toLocaleString('en-IN');
+            
+            const cardHtml = `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-300">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/94a3b8/ffffff?text=${pkg.destination.replace(/ /g, '+')}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fecaca/881337?text=Honeymoon+Escape'" alt="${pkg.title} Image" class="w-full h-48 object-cover">
+                        <span class="absolute top-2 right-2 px-3 py-1 text-sm font-bold text-white rounded-full luxury-badge shadow-lg flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5c0 4.192 4.192 7.5 5 7.5s5-3.308 5-7.5a5 5 0 00-5-5z"></path></svg>
+                            ${pkg.theme.split(',')[0].trim()}
+                        </span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1 truncate">${pkg.title}</h3>
+                        
+                        <div class="flex items-center text-sm text-gray-600 mb-3 space-x-3">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m5.61 0a2 2 0 11-2.828 0L10 13.172l-6.78-6.78a2 2 0 112.828-2.828l3.952 3.952 3.952-3.952a2 2 0 112.828 2.828z"></path></svg>
+                                ${pkg.duration}
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path></svg>
+                                ${pkg.destination}
+                            </span>
+                        </div>
+                        
+                        <p class="text-xs text-gray-500 mb-4">${pkg.location}</p>
+
+                        <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                            <div class="flex flex-col">
+                                <span class="text-lg font-medium text-gray-500">Starting From:</span>
+                                <span class="text-3xl font-extrabold brand-accent">
+                                    ₹ ${priceFormatted}
+                                </span>
+                            </div>
+                            <button onclick="console.log('Book Honeymoon: ${pkg.title}')" class="px-5 py-3 bg-brand-accent text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300 text-base shadow-md">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            return cardHtml;
+        };
+        
+        // Main function to display packages
+        const renderPackages = (packagesToRender) => {
+            tourGrid.innerHTML = packagesToRender.map(renderPackageCard).join('');
+            packageCountSpan.textContent = packagesToRender.length;
+            
+            if (packagesToRender.length === 0) {
+                noResultsDiv.classList.remove('hidden');
+            } else {
+                noResultsDiv.classList.add('hidden');
+            }
+        };
+
+        // --- Filtering Logic ---
+
+        const applyFilter = (filterValue) => {
+            // Update button styles
+            filterButtons.forEach(btn => {
+                if (btn.dataset.filter === filterValue) {
+                    btn.classList.add('bg-brand-accent', 'text-white', 'shadow-md');
+                    btn.classList.remove('bg-white', 'text-gray-700', 'border');
+                } else {
+                    btn.classList.remove('bg-brand-accent', 'text-white', 'shadow-md');
+                    btn.classList.add('bg-white', 'text-gray-700', 'border');
+                }
+            });
+
+            let filteredPackages = allPackages;
+            if (filterValue !== 'all') {
+                if (filterValue === 'India') {
+                     // Filter specifically for Indian destinations (Goa, Udaipur, Kerala, etc.)
+                     filteredPackages = allPackages.filter(pkg => pkg.destination === 'India');
+                } else {
+                    filteredPackages = allPackages.filter(pkg => pkg.destination === filterValue);
+                }
+            }
+
+            renderPackages(filteredPackages);
+        };
+
+        // Add event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const filter = e.target.dataset.filter;
+                applyFilter(filter);
+            });
+        });
+
+
+        // --- Initialization ---
+        window.onload = () => {
+            // Default to showing all packages
+            applyFilter('all');
+        };
+    </script>
+</body>
+</html>

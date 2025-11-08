@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Visa Services | Apply, Process, Track | TOUR BAZAR 24X7</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background */
+            scroll-behavior: smooth;
+        }
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange */
+        }
+        .bg-brand-accent {
+            background-color: #FF8C00;
+        }
+        .hover\:bg-yellow-600:hover {
+            background-color: #D97706; /* Slightly darker orange */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .visa-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(255, 140, 0, 0.1), 0 4px 6px -4px rgba(255, 140, 0, 0.1);
+            border-color: #FF8C00;
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Standardized) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Logo, Search, Account, Bookings (Primary Nav Bar) -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+
+                <!-- Logo & Branding -->
+                <a href="tour_bazar_24x7.html" class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </a>
+
+                <!-- Search Bar (Wide and Prominent - Centered) -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Utility Links / Login -->
+                 <a href="Login.html">
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                     <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div></a>
+
+                    <!-- BOOKINGS LINK -->
+                    <a href="Booking.html" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Secondary Navigation (Highlighting Visa Services) -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <a href="Home.html" class="hover:text-brand-accent transition duration-150">Home</a>
+                    <a href="Shop All Tours.html" class="flex items-center hover:text-brand-accent transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </a>
+                    <a href="Hot Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <a href="Honey.html" class="hover:text-brand-accent transition duration-150">Honeymoon Specials</a>
+                    <a href="Visa.html" class="text-brand-accent font-bold transition duration-150">Visa Services</a>
+                    <a href="Insurance.html" class="hover:text-brand-accent transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Visa Hero Section & Search -->
+        <div class="text-center bg-white p-8 sm:p-12 rounded-2xl shadow-xl mb-12 border border-gray-100">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">
+                Global Visa Assistance <span class="brand-accent">Simplified</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Secure your entry permits with ease. Search for visa requirements, apply, and track your application status online.
+            </p>
+
+            <!-- Country Search Form -->
+            <form class="flex flex-col sm:flex-row max-w-2xl mx-auto space-y-4 sm:space-y-0 sm:space-x-4">
+                <div class="relative flex-1">
+                    <svg class="w-6 h-6 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.05 19.824v-2.029a4.996 4.996 0 0110.1 0v2.029m-1.01-4.058V15a6.002 6.002 0 00-12 0v.766a1.99 1.99 0 001.002 1.737l.794.46a1.99 1.99 0 001.996 0l.794-.46a1.99 1.99 0 001.002-1.737zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"></path></svg>
+                    <select class="w-full pl-12 pr-4 py-4 bg-gray-50 text-gray-800 text-lg rounded-xl border-2 border-gray-200 focus:border-brand-accent focus:ring-brand-accent focus:ring-1 transition cursor-pointer">
+                        <option value="" disabled selected>Select Destination Country</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="schengen">Schengen Area (EU)</option>
+                        <option value="uae">UAE (Dubai)</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="us">India</option>
+                        <option value="uk">Nepal</option>
+                        <option value="schengen">Bhutan</option>
+                        <option value="uae">SriLanka</option>
+                        <option value="thailand">Pakistan</option>
+                        <option value="australia">Vietnam</option>
+                        <option value="canada">Maldives</option>
+                    </select>
+                </div>
+                <button type="submit" class="sm:w-auto py-4 px-8 bg-brand-accent text-white font-semibold text-lg rounded-xl hover:bg-yellow-600 transition duration-300 shadow-lg">
+                    Check Requirements
+                </button>
+            </form>
+        </div>
+
+        <!-- Section 2: Popular Visa Types -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Core Visa Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Card 1: Tourist Visa -->
+                <div class="visa-card bg-white p-6 rounded-xl border border-gray-200 shadow-md transition duration-300 cursor-pointer">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <svg class="w-10 h-10 brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold">Tourist Visa</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">For leisure travel, visiting family, or short-term courses. Hassle-free documentation assistance.</p>
+                    <a href="#" class="text-sm font-semibold brand-accent hover:underline">View Details & Pricing →</a>
+                </div>
+
+                <!-- Card 2: Business Visa -->
+                <div class="visa-card bg-white p-6 rounded-xl border border-gray-200 shadow-md transition duration-300 cursor-pointer">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <svg class="w-10 h-10 brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.55 23.55 0 0112 15c-3.185 0-6.371-.582-9-1.745M16 16v2m-4-2v2m-4-2v2m4-4h2m-4 0h-2m4 0a3 3 0 00-3 3v2h6v-2a3 3 0 00-3-3z"></path></svg>
+                        <h3 class="text-xl font-bold">Business Visa</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">For meetings, conferences, contract negotiations, or short business trips. Fast-track options available.</p>
+                    <a href="#" class="text-sm font-semibold brand-accent hover:underline">View Details & Pricing →</a>
+                </div>
+
+                <!-- Card 3: Student Visa -->
+                <div class="visa-card bg-white p-6 rounded-xl border border-gray-200 shadow-md transition duration-300 cursor-pointer">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <svg class="w-10 h-10 brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <h3 class="text-xl font-bold">Student Visa</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">For academic enrollment in colleges, universities, and vocational schools. Covers all intake seasons.</p>
+                    <a href="#" class="text-sm font-semibold brand-accent hover:underline">View Details & Pricing →</a>
+                </div>
+
+                <!-- Card 4: Transit/E-Visa -->
+                <div class="visa-card bg-white p-6 rounded-xl border border-gray-200 shadow-md transition duration-300 cursor-pointer">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <svg class="w-10 h-10 brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-xl font-bold">Transit & E-Visa</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">Quick electronic visas for eligible countries and permits for short layovers/transfers.</p>
+                    <a href="#" class="text-sm font-semibold brand-accent hover:underline">View Details & Pricing →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Simple Process Flow -->
+        <section class="bg-white p-8 rounded-2xl shadow-xl mb-12 border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Simple 3-Step Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Step 1 -->
+                <div class="text-center p-4 border-2 border-brand-accent/30 rounded-lg bg-brand-accent/5">
+                    <div class="text-5xl font-black brand-accent mb-3">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Check & Select</h3>
+                    <p class="text-gray-600">Enter your destination to view requirements, documents needed, and processing fees.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center p-4 border-2 border-brand-accent/30 rounded-lg bg-brand-accent/5">
+                    <div class="text-5xl font-black brand-accent mb-3">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Submit Documents</h3>
+                    <p class="text-gray-600">Upload your documents securely online. Our experts will review and prepare your application.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center p-4 border-2 border-brand-accent/30 rounded-lg bg-brand-accent/5">
+                    <div class="text-5xl font-black brand-accent mb-3">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Track & Receive</h3>
+                    <p class="text-gray-600">Track your application status in real-time and receive your visa upon approval.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: CTA for Consultation -->
+        <section class="bg-brand-accent text-white p-10 rounded-2xl shadow-2xl text-center">
+            <h2 class="text-4xl font-extrabold mb-3">Need Personalized Visa Consultation?</h2>
+            <p class="text-xl mb-6 opacity-90">Our dedicated team of visa specialists is ready to handle complex cases and large group applications.</p>
+            <button class="py-3 px-8 bg-white text-brand-accent font-bold text-lg rounded-lg shadow-xl hover:bg-gray-100 transition duration-300">
+                Book a Free Consultation Call
+            </button>
+        </section>
+
+    </main>
+    <!-- END OF MAIN CONTENT -->
+
+    <!-- Footer (Standardized) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

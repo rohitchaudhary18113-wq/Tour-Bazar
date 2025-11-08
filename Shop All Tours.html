@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tour Packages | TOUR BAZAR 24X7</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background, like e-commerce sites */
+            scroll-behavior: smooth;
+        }
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange */
+        }
+        .bg-brand-accent {
+            background-color: #FF8C00;
+        }
+        .hover\:bg-yellow-600:hover {
+            background-color: #D97706; /* Slightly darker orange */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00', 
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Identical to main page, with active link updated) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Logo, Search, Account, Bookings (Primary Nav Bar) -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+                
+                <!-- Logo & Branding -->
+                <a href="C:\office\7\Logo.png" class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="C:\office\7\Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </a>
+
+                <!-- Search Bar (Wide and Prominent - Centered) -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <!-- Category Dropdown -->
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <!-- Search Button (Brand Accent Color) -->
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <a href="Login.html">
+                <!-- Utility Links / Login -->
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                     <!-- Account Link -->
+                    <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div> </a>
+
+                    <!-- Bookings Icon (Brand accent text) -->
+                    <a href="Booking.html" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 2: Secondary Navigation (Highlighting current page) -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <a href="C:\office\7\Home.html" class="hover:text-brand-accent transition duration-150 ">Home</a>
+                    <span class="flex items-center text-brand-accent font-bold transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </span>
+                    <a href= "file:///C:/office/7/Hot%20Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="file:///C:/office/7/Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <a href="file:///C:/office/7/Honey.html" class="hover:text-brand-accent transition duration-150">Honeymoon Specials</a>
+                    <a href="file:///C:/office/7/Visa.html" class="hover:text-brand-accent transition duration-150">Visa Services</a>
+                    <a href="Insurance.html" class="hover:text-brand-accent transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-6">Explore Our 32+ Global Tour Packages</h1>
+        
+        <div class="flex flex-col lg:flex-row gap-8">
+            
+            <!-- Sidebar for Filters (25% Width on Desktop) -->
+            <aside class="lg:w-1/4 p-4 bg-white rounded-xl shadow-lg h-fit sticky top-[120px]">
+                <h2 class="text-xl font-bold mb-4 border-b pb-2 text-gray-800">Filter Tours</h2>
+                
+                <!-- Filter by Country/Location -->
+                <div class="mb-6">
+                    <label class="block text-md font-semibold mb-2 text-gray-700">Country / Region</label>
+                    <div id="country-filters" class="space-y-2">
+                        <!-- Checkboxes will be dynamically populated here -->
+                    </div>
+                </div>
+
+                <!-- Filter by Duration -->
+                <div class="mb-6">
+                    <label class="block text-md font-semibold mb-2 text-gray-700">Duration</label>
+                    <div id="duration-filters" class="space-y-2">
+                        <!-- Checkboxes will be dynamically populated here -->
+                    </div>
+                </div>
+
+                <button onclick="applyFilters()" class="w-full py-2 bg-brand-accent text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-200">
+                    Apply Filters
+                </button>
+                <button onclick="resetFilters()" class="w-full mt-2 py-2 text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition duration-200 text-sm">
+                    Reset Filters
+                </button>
+            </aside>
+
+            <!-- Main Tour Grid (75% Width on Desktop) -->
+            <main class="lg:w-3/4">
+                <div class="mb-4 text-sm text-gray-600">
+                    <span id="package-count" class="font-bold text-gray-800">32</span> packages found.
+                </div>
+                <div id="tour-packages-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Tour package cards will be rendered here by JavaScript -->
+                </div>
+
+                <div id="no-results" class="hidden text-center p-12 bg-gray-100 rounded-xl mt-10">
+                    <h3 class="text-xl font-semibold text-gray-700">No Packages Found</h3>
+                    <p class="text-gray-500 mt-2">Try adjusting your filters or search terms.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- Footer (Identical to main page) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- 32+ Mock Tour Package Data ---
+        const allPackages = [
+            // India (8 Packages)
+            { id: 1, title: "Kerala Backwater Bliss", location: "Kerala, India", duration: "7 Days", price: "42,000", country: "India", region: "South Asia" },
+            { id: 2, title: "Munnar Tea Gardens Trek", location: "Kerala, India", duration: "5 Days", price: "28,000", country: "India", region: "South Asia" },
+            { id: 3, title: "Goan Beach Carnival", location: "Goa, India", duration: "4 Days", price: "18,000", country: "India", region: "South Asia" },
+            { id: 4, title: "Luxury Casino Stay in Goa", location: "Goa, India", duration: "3 Days", price: "35,000", country: "India", region: "South Asia" },
+            { id: 5, title: "Royal Rajasthan Palace Tour", location: "Rajasthan, India", duration: "10 Days", price: "95,000", country: "India", region: "South Asia" },
+            { id: 6, title: "Desert Safari Jaisalmer", location: "Rajasthan, India", duration: "4 Days", price: "25,000", country: "India", region: "South Asia" },
+            { id: 7, title: "Shimla & Manali Honeymoon", location: "Himachal Pradesh, India", duration: "8 Days", price: "55,000", country: "India", region: "South Asia" },
+            { id: 8, title: "Kasol Trekking Adventure", location: "Himachal Pradesh, India", duration: "6 Days", price: "32,000", country: "India", region: "South Asia" },
+
+            // USA (6 Packages)
+            { id: 9, title: "California Coast Drive", location: "California, USA", duration: "12+ Days", price: "4,50,000", country: "USA", region: "North America" },
+            { id: 10, title: "Hollywood & LA Exploration", location: "California, USA", duration: "5 Days", price: "1,80,000", country: "USA", region: "North America" },
+            { id: 11, title: "NYC Times Square Lights", location: "New York, USA", duration: "6 Days", price: "2,20,000", country: "USA", region: "North America" },
+            { id: 12, title: "Upstate New York Fall Foliage", location: "New York, USA", duration: "8 Days", price: "2,80,000", country: "USA", region: "North America" },
+            { id: 13, title: "Orlando Theme Park Mania", location: "Florida, USA", duration: "7 Days", price: "3,10,000", country: "USA", region: "North America" },
+            { id: 14, title: "Miami Beach & Nightlife", location: "Florida, USA", duration: "4 Days", price: "1,50,000", country: "USA", region: "North America" },
+            
+            // Europe (8 Packages)
+            { id: 15, title: "Venice & Rome Classic", location: "Italy", duration: "9 Days", price: "3,80,000", country: "Italy", region: "Europe" },
+            { id: 16, title: "Tuscany Wine & Food Trail", location: "Italy", duration: "5 Days", price: "1,95,000", country: "Italy", region: "Europe" },
+            { id: 17, title: "Paris City of Love Special", location: "France", duration: "4 Days", price: "1,70,000", country: "France", region: "Europe" },
+            { id: 18, title: "French Riviera Luxury Cruise", location: "France", duration: "7 Days", price: "4,20,000", country: "France", region: "Europe" },
+            { id: 19, title: "Swiss Alps Scenic Rail Tour", location: "Switzerland", duration: "7 Days", price: "3,50,000", country: "Switzerland", region: "Europe" },
+            { id: 20, title: "Zurich & Geneva Highlights", location: "Switzerland", duration: "5 Days", price: "2,50,000", country: "Switzerland", region: "Europe" },
+            { id: 21, title: "Santorini Honeymoon Escape", location: "Greece", duration: "6 Days", price: "3,10,000", country: "Greece", region: "Europe" },
+            { id: 22, title: "Ancient Greece History Tour", location: "Greece", duration: "8 Days", price: "2,85,000", country: "Greece", region: "Europe" },
+
+            // Asia/Oceania/Africa (10 Packages)
+            { id: 23, title: "Bangkok & Phuket Combo", location: "Thailand", duration: "8 Days", price: "95,000", country: "Thailand", region: "Southeast Asia" },
+            { id: 24, title: "Northern Thailand Culture Trip", location: "Thailand", duration: "6 Days", price: "75,000", country: "Thailand", region: "Southeast Asia" },
+            { id: 25, title: "Hanoi & Ha Long Bay Cruise", location: "Vietnam", duration: "7 Days", price: "88,000", country: "Vietnam", region: "Southeast Asia" },
+            { id: 26, title: "Saigon War History Trail", location: "Vietnam", duration: "5 Days", price: "68,000", country: "Vietnam", region: "Southeast Asia" },
+            { id: 27, title: "Tokyo City Lights & Anime", location: "Japan", duration: "6 Days", price: "3,20,000", country: "Japan", region: "East Asia" },
+            { id: 28, title: "Kyoto Temple & Gardens", location: "Japan", duration: "4 Days", price: "1,90,000", country: "Japan", region: "East Asia" },
+            { id: 29, title: "Maldives Water Villa Package", location: "Maldives", duration: "5 Days", price: "4,80,000", country: "Maldives", region: "South Asia" },
+            { id: 30, title: "Ubud Culture & Yoga Retreat", location: "Bali, Indonesia", duration: "6 Days", price: "65,000", country: "Indonesia", region: "Southeast Asia" },
+            { id: 31, title: "Cape Town Safari & Coast", location: "South Africa", duration: "10 Days", price: "4,90,000", country: "South Africa", region: "Africa" },
+            { id: 32, title: "Maasai Mara Wildlife Safari", location: "Kenya", duration: "7 Days", price: "3,80,000", country: "Kenya", region: "Africa" },
+        ];
+
+
+        const tourGrid = document.getElementById('tour-packages-grid');
+        const countryFiltersDiv = document.getElementById('country-filters');
+        const durationFiltersDiv = document.getElementById('duration-filters');
+        const packageCountSpan = document.getElementById('package-count');
+        const noResultsDiv = document.getElementById('no-results');
+
+        // --- Helper functions for data extraction ---
+        
+        // Extract unique countries for filters
+        const getUniqueCountries = () => [...new Set(allPackages.map(p => p.country))].sort();
+        
+        // Define duration buckets for filters
+        const durationBuckets = [
+            { label: '4 Days or Less', value: '4-' },
+            { label: '5 to 7 Days', value: '5-7' },
+            { label: '8 to 11 Days', value: '8-11' },
+            { label: '12+ Days', value: '12+' },
+        ];
+
+
+        // --- Rendering Functions ---
+
+        // Function to render a single tour package card
+        const renderPackageCard = (pkg) => {
+            const cardHtml = `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/FF8C00/ffffff?text=${pkg.country}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/94a3b8/ffffff?text=Travel+Package'" alt="${pkg.title} Image" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1 truncate">${pkg.title}</h3>
+                        
+                        <div class="flex items-center text-sm text-gray-600 mb-3 space-x-3">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
+                                ${pkg.duration}
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                                ${pkg.location}
+                            </span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="text-2xl font-bold brand-accent">
+                                ₹ ${pkg.price}
+                            </span>
+                            <button onclick="console.log('Booked: ${pkg.title}')" class="px-4 py-2 bg-brand-accent text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300 text-sm">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            return cardHtml;
+        };
+        
+        // Main function to display packages
+        const renderPackages = (packagesToRender) => {
+            tourGrid.innerHTML = packagesToRender.map(renderPackageCard).join('');
+            packageCountSpan.textContent = packagesToRender.length;
+            
+            if (packagesToRender.length === 0) {
+                noResultsDiv.classList.remove('hidden');
+            } else {
+                noResultsDiv.classList.add('hidden');
+            }
+        };
+
+        // Function to render filter checkboxes
+        const renderFilters = () => {
+            // Country Filters
+            countryFiltersDiv.innerHTML = getUniqueCountries().map(country => `
+                <div class="flex items-center">
+                    <input id="country-${country.replace(/\s/g, '-')}" type="checkbox" value="${country}" data-filter-group="country" class="h-4 w-4 text-brand-accent border-gray-300 rounded focus:ring-brand-accent">
+                    <label for="country-${country.replace(/\s/g, '-')}" class="ml-3 text-sm text-gray-700">${country}</label>
+                </div>
+            `).join('');
+
+            // Duration Filters
+            durationFiltersDiv.innerHTML = durationBuckets.map(bucket => `
+                <div class="flex items-center">
+                    <input id="duration-${bucket.value}" type="checkbox" value="${bucket.value}" data-filter-group="duration" class="h-4 w-4 text-brand-accent border-gray-300 rounded focus:ring-brand-accent">
+                    <label for="duration-${bucket.value}" class="ml-3 text-sm text-gray-700">${bucket.label}</label>
+                </div>
+            `).join('');
+        };
+
+        // --- Filtering Logic ---
+
+        // Checks if a package duration matches the selected duration filter bucket
+        const checkDurationMatch = (durationString, selectedBuckets) => {
+            if (selectedBuckets.length === 0) return true;
+
+            const days = parseInt(durationString.split(' ')[0], 10);
+            if (isNaN(days)) return true; // Safety fallback
+
+            for (const bucketValue of selectedBuckets) {
+                if (bucketValue === '4-') {
+                    if (days <= 4) return true;
+                } else if (bucketValue === '5-7') {
+                    if (days >= 5 && days <= 7) return true;
+                } else if (bucketValue === '8-11') {
+                    if (days >= 8 && days <= 11) return true;
+                } else if (bucketValue === '12+') {
+                    if (days >= 12) return true;
+                }
+            }
+            return false;
+        };
+
+        // Main filter function
+        const applyFilters = () => {
+            const countryCheckboxes = Array.from(document.querySelectorAll('#country-filters input:checked')).map(cb => cb.value);
+            const durationCheckboxes = Array.from(document.querySelectorAll('#duration-filters input:checked')).map(cb => cb.value);
+
+            let filteredPackages = allPackages.filter(pkg => {
+                const countryMatch = countryCheckboxes.length === 0 || countryCheckboxes.includes(pkg.country);
+                const durationMatch = checkDurationMatch(pkg.duration, durationCheckboxes);
+                
+                return countryMatch && durationMatch;
+            });
+
+            renderPackages(filteredPackages);
+        };
+
+        // Reset function
+        const resetFilters = () => {
+            document.querySelectorAll('#country-filters input').forEach(cb => cb.checked = false);
+            document.querySelectorAll('#duration-filters input').forEach(cb => cb.checked = false);
+            renderPackages(allPackages);
+        };
+
+
+        // --- Initialization ---
+        window.onload = () => {
+            renderFilters();
+            renderPackages(allPackages);
+        };
+    </script>
+</body>
+</html>

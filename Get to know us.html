@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Get to Know TOUR BAZAR 24X7</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background */
+            scroll-behavior: smooth;
+        }
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange */
+        }
+        .bg-brand-accent {
+            background-color: #FF8C00;
+        }
+        .hover\:bg-yellow-600:hover {
+            background-color: #D97706; /* Slightly darker orange */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* SLIDER CSS - Generic Track and Item Styling */
+        .slider-track-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .slider-track-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+        .slider-item {
+            flex-shrink: 0;
+            padding: 1rem;
+        }
+        /* Style for disabled arrows */
+        .slider-arrow:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00', 
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Identical to previous, 'Get to Know Us' link removed) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Primary Nav Bar -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+                
+                <!-- Logo & Branding -->
+                <a href="tour_bazar_24x7.html" class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="C:\office\7\Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </a>
+
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Utility Links / Login --> <a href="Login.html">
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                     <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div></a>
+                    <a href="Booking.html" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 2: Secondary Navigation -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <a href="file:///C:/office/7/Home.html" class="hover:text-brand-accent transition duration-150">Home</a>
+                    <a href="file:///C:/office/7/Shop%20All%20Tours.html" class="flex items-center hover:text-brand-accent transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </a>
+                    <a href="file:///C:/office/7/Hot%20Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="file:///C:/office/7/Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <a href="file:///C:/office/7/Honey.html" class="hover:text-brand-accent transition duration-150">Honeymoon Specials</a>
+                    <a href="file:///C:/office/7/Visa.html" class="hover:text-brand-accent transition duration-150">Visa Services</a>
+                    <a href="Insurance.html" class="hover:text-brand-accent transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Company Introduction (Full Width) -->
+        <section class="mb-12 text-center bg-white p-8 rounded-xl shadow-lg border-t-4 border-brand-accent">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 brand-accent">Meet TOUR BAZAR 24X7</h1>
+            <p id="company_intro" class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                TOUR BAZAR 24X7 is a dedicated travel platform serving globetrotters since <span class="font-bold text-gray-900" id="start_year"></span>.
+                For over <span class="font-bold text-gray-900" id="years_of_operation"></span> years, we've specialized in crafting seamless, personalized, and unforgettable travel experiences across the globe. We pride ourselves on our 24x7 support and our deep network of trusted partners, ensuring your journey is always in expert hands.
+            </p>
+        </section>
+
+        <!-- START: Split Section (Job/Contact on Left, Sliders on Right) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            
+            <!-- LEFT HALF: Job Vacancy & Customer Support -->
+            <div class="space-y-8">
+                
+                <!-- Job Vacancy Form -->
+                <section class="bg-indigo-50 p-8 rounded-xl shadow-xl border-l-4 border-indigo-500">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Job Vacancy: Customer Support Specialist</h2>
+                    <p class="text-gray-600 mb-6">Join our 24X7 team and help happy travelers plan their dream trips. Apply below!</p>
+
+                    <form id="jobVacancyForm" action="#" method="POST" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="applicant_name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="applicant_name" name="applicant_name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                            </div>
+                            <div>
+                                <label for="applicant_email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="applicant_email" name="applicant_email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                            </div>
+                        </div>
+                        
+                        <!-- 5 Job-Related Questions -->
+                        <div class="space-y-4 pt-4">
+                            <div>
+                                <label for="q1_experience" class="block text-sm font-medium text-gray-700">1. How many years of experience do you have in a customer-facing or calling role?</label>
+                                <input type="number" id="q1_experience" name="q1_experience" min="0" value="0" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                            </div>
+                            <div>
+                                <label for="q2_shift" class="block text-sm font-medium text-gray-700">2. Are you comfortable working flexible shifts, including nights/weekends, to cover our 24x7 operation?</label>
+                                <select id="q2_shift" name="q2_shift" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent bg-white">
+                                    <option value="yes">Yes, I am flexible</option>
+                                    <option value="no">No, only day shifts</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="q3_languages" class="block text-sm font-medium text-gray-700">3. Besides English, which language(s) are you fluent in? (e.g., Hindi, Spanish, French)</label>
+                                <input type="text" id="q3_languages" name="q3_languages" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                            </div>
+                            <div>
+                                <label for="q4_sales" class="block text-sm font-medium text-gray-700">4. Describe a time you successfully convinced a customer to upgrade their package or service.</label>
+                                <textarea id="q4_sales" name="q4_sales" rows="2" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent"></textarea>
+                            </div>
+                            <div>
+                                <label for="q5_travel" class="block text-sm font-medium text-gray-700">5. What is your favorite international travel destination and why?</label>
+                                <textarea id="q5_travel" name="q5_travel" rows="2" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-bold text-lg rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg">
+                                SUBMIT APPLICATION
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Customer Support Contact -->
+                <section class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Need Immediate Assistance?</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white p-6 rounded-xl shadow-lg border-b-4 border-brand-accent">
+                        <div class="sm:border-r border-gray-200 sm:pr-4">
+                            <h3 class="text-lg font-semibold brand-accent mb-1">Customer Support Email</h3>
+                            <p class="text-base text-gray-700 font-medium">support@tourbazar24x7.com</p>
+                        </div>
+                        <div class="sm:pl-4 mt-4 sm:mt-0">
+                            <h3 class="text-lg font-semibold brand-accent mb-1">24/7 Contact Number</h3>
+                            <p class="text-xl text-gray-900 font-extrabold">+91 9876 543 210</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT HALF: Dual Sliders -->
+            <div class="space-y-8">
+                
+                <!-- 1. Testimonial Slider -->
+                <section class="bg-white p-6 md:p-8 rounded-xl shadow-xl border-t-4 border-indigo-400">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center brand-accent">Happy Traveller Stories</h2>
+                    
+                    <!-- Slider Track Container -->
+                    <div id="testimonial-slider-track-container" class="slider-track-container h-[250px] md:h-[300px]">
+                        <div id="testimonial-track-inner" class="slider-track-inner" style="width: 300%;">
+                            
+                            <!-- Slide 1: Testimonial 1 (Width is 100% / 3 slides = 33.33%) -->
+                            <div class="slider-item w-1/3 h-full flex items-center justify-center">
+                                <div class="p-4 sm:p-6 bg-gray-50 rounded-xl shadow-inner border-l-4 border-indigo-400 text-center mx-auto max-w-lg">
+                                    <p class="text-gray-700 italic mb-4 text-md sm:text-lg">"The Andaman trip organized by TOUR BAZAR was flawless. From the perfect hotel recommendations to the private tour guide, everything exceeded our expectations. Truly 5-star service around the clock!"</p>
+                                    <p class="font-bold text-sm text-indigo-600">- Rahul & Priya S., Mumbai</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2: Testimonial 2 -->
+                            <div class="slider-item w-1/3 h-full flex items-center justify-center">
+                                <div class="p-4 sm:p-6 bg-gray-50 rounded-xl shadow-inner border-l-4 border-brand-accent text-center mx-auto max-w-lg">
+                                    <p class="text-gray-700 italic mb-4 text-md sm:text-lg">"We booked a custom Europe package, and the cost estimation was spot on! Their team handled all the complicated visa requirements and flight connections smoothly. Highly recommend their professional support."</p>
+                                    <p class="font-bold text-sm brand-accent">- Fatima A., Dubai</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Testimonial 3 -->
+                            <div class="slider-item w-1/3 h-full flex items-center justify-center">
+                                <div class="p-4 sm:p-6 bg-gray-50 rounded-xl shadow-inner border-l-4 border-green-400 text-center mx-auto max-w-lg">
+                                    <p class="text-gray-700 italic mb-4 text-md sm:text-lg">"Best honeymoon experience! The resort they suggested in the Maldives was exactly what we needed. The 24/7 chat support was useful when we needed to change an excursion last minute. Fantastic work!"</p>
+                                    <p class="font-bold text-sm text-green-600">- Chris T., London</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Controls -->
+                    <div class="flex justify-center items-center mt-6">
+                        <button id="testimonial-prev-slide" class="slider-arrow p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 mr-4">
+                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <div id="testimonial-dots" class="flex space-x-2">
+                            <!-- Dots generated by JS -->
+                        </div>
+                        <button id="testimonial-next-slide" class="slider-arrow p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ml-4">
+                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </section>
+                
+                <!-- 2. Partners Slider -->
+                <section class="bg-white p-6 md:p-8 rounded-xl shadow-xl border-t-4 border-brand-accent">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center brand-accent">Trusted Global Travel Partners</h2>
+
+                    <!-- Slider Track Container -->
+                    <div id="partners-slider-track-container" class="slider-track-container h-[100px] md:h-[120px]">
+                         <div id="partners-track-inner" class="slider-track-inner" style="width: 200%;">
+                            
+                            <!-- Slide 1: First six partners (Width is 100% / 2 slides = 50%) -->
+                            <div class="slider-item w-1/2 h-full flex items-center justify-center">
+                                <div class="grid grid-cols-3 gap-4 sm:gap-6 items-center justify-center w-full max-w-lg">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Global+Airlines" alt="Global Airlines Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Luxury+Hotels" alt="Luxury Hotels Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Visa+FastTrack" alt="Visa FastTrack Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Local+Tours" alt="Local Tours Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Adventure+Gear" alt="Adventure Gear Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Insurance+Pro" alt="Insurance Pro Partner">
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2: Next six partners (Duplicated for demonstration) -->
+                            <div class="slider-item w-1/2 h-full flex items-center justify-center">
+                                <div class="grid grid-cols-3 gap-4 sm:gap-6 items-center justify-center w-full max-w-lg">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Rail+Europe" alt="Rail Europe Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Sea+Cruises" alt="Sea Cruises Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Eco+Resorts" alt="Eco Resorts Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Safari+Guides" alt="Safari Guides Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Ski+Lodges" alt="Ski Lodges Partner">
+                                    <img class="partner-logo h-8 object-contain mx-auto" src="https://placehold.co/120x40/ffffff/999999?text=Car+Rentals" alt="Car Rentals Partner">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <div class="flex justify-center items-center mt-6">
+                        <button id="partners-prev-slide" class="slider-arrow p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 mr-4">
+                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <div id="partners-dots" class="flex space-x-2">
+                             <!-- Dots generated by JS -->
+                        </div>
+                        <button id="partners-next-slide" class="slider-arrow p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ml-4">
+                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <!-- END: Split Section -->
+        </div>
+
+    </div>
+
+
+    <!-- Footer (Identical to other pages) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        
+        /**
+         * Generic slider function to handle navigation for any slider on the page.
+         * @param {string} prefix - The unique ID prefix for the slider elements (e.g., 'testimonial', 'partners').
+         * @param {number} totalSlides - The total number of slides in this specific slider.
+         * @param {number} itemWidthPercent - The width of a single slider item (e.g., 33.33 for 3 slides, 50 for 2 slides).
+         */
+        function initSlider(prefix, totalSlides, itemWidthPercent) {
+            let currentSlide = 0;
+            const track = document.getElementById(`${prefix}-track-inner`);
+            const dotsContainer = document.getElementById(`${prefix}-dots`);
+            const prevButton = document.getElementById(`${prefix}-prev-slide`);
+            const nextButton = document.getElementById(`${prefix}-next-slide`);
+
+            if (!track) return; // Exit if elements are not found
+
+            // 1. Generate Dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.className = `w-3 h-3 rounded-full transition duration-300 ${i === 0 ? 'bg-brand-accent' : 'bg-gray-300 hover:bg-gray-400'}`;
+                dot.dataset.slide = i;
+                dot.addEventListener('click', () => {
+                    currentSlide = i;
+                    updateSlider();
+                });
+                dotsContainer.appendChild(dot);
+            }
+
+            // 2. Update function
+            function updateSlider() {
+                // Calculate the translation value
+                const translateValue = -currentSlide * itemWidthPercent; 
+                track.style.transform = `translateX(${translateValue}%)`;
+
+                // Update dots appearance
+                dotsContainer.querySelectorAll('button').forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('bg-brand-accent');
+                        dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+                    } else {
+                        dot.classList.remove('bg-brand-accent');
+                        dot.classList.add('bg-gray-300', 'hover:bg-gray-400');
+                    }
+                });
+
+                // Handle arrows visibility (disable at ends)
+                prevButton.disabled = currentSlide === 0;
+                nextButton.disabled = currentSlide === totalSlides - 1;
+            }
+
+            // 3. Navigation handlers
+            nextButton.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlider();
+                }
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlider();
+                }
+            });
+
+            // Initial state update
+            updateSlider();
+        }
+
+        // Initialize script on window load
+        window.onload = function() {
+            // Calculate and set years of operation dynamically
+            const startYear = 2012; // Example start year
+            const currentYear = new Date().getFullYear();
+            const years = currentYear - startYear;
+
+            document.getElementById('start_year').textContent = startYear;
+            document.getElementById('years_of_operation').textContent = years;
+
+            // Initialize the two separate sliders
+            // Testimonial Slider: 3 slides, 33.33% width per item
+            initSlider('testimonial', 3, 33.33); 
+            
+            // Partners Slider: 2 slides, 50% width per item
+            initSlider('partners', 2, 50); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Partners Network | TOUR BAZAR 24X7</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling for navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light background */
+            scroll-behavior: smooth;
+        }
+        .brand-accent {
+            color: #FF8C00; /* Darker Orange */
+        }
+        .bg-brand-accent {
+            background-color: #FF8C00;
+        }
+        .hover\:bg-yellow-600:hover {
+            background-color: #D97706; /* Slightly darker orange */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .partner-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(255, 140, 0, 0.2);
+        }
+        /* Custom styles for the counter effect area */
+        .counter-section {
+            background: linear-gradient(135deg, #FFFBEB, #FFECD2); /* Soft, inviting gradient */
+        }
+        /* Style for the numbers */
+        .count-number {
+            display: inline-block;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+    <!-- Configure Tailwind to use the new brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-accent': '#FF8C00',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Standardized - Same as other pages) -->
+    <header class="sticky top-0 z-20 header-shadow">
+        <!-- Row 1: Logo, Search, Account, Bookings (Primary Nav Bar) -->
+        <div class="bg-white text-gray-800 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 flex items-center justify-between">
+
+                <!-- Logo & Branding -->
+                <a href="tour_bazar_24x7.html" class="min-w-[150px] mr-4 cursor-pointer">
+                    <img src="Logo.png" alt="TOUR BAZAR 24X7 Logo" class="h-10 object-contain">
+                </a>
+
+                <!-- Search Bar (Wide and Prominent - Centered) -->
+                <div class="flex-1 max-w-4xl mx-2 hidden md:flex">
+                    <form class="flex w-full">
+                        <select class="hidden sm:block bg-gray-100 text-gray-800 text-sm p-3 rounded-l-lg border border-gray-300 focus:outline-none hover:bg-gray-200 transition cursor-pointer">
+                            <option>All Packages</option>
+                            <option>Honeymoon</option>
+                            <option>Adventure</option>
+                            <option>Flights</option>
+                        </select>
+                        <input type="text" placeholder="Search destinations, tour codes, or hotels..." class="flex-1 p-3 text-gray-900 focus:outline-none border-t border-b border-gray-300" />
+                        <button type="submit" class="px-4 bg-brand-accent text-white rounded-r-lg hover:bg-yellow-600 transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Utility Links / Login -->
+                <div class="flex items-center space-x-4 text-sm font-semibold whitespace-nowrap ml-4">
+                     <div class="hidden lg:block cursor-pointer text-gray-700 hover:text-brand-accent transition">
+                        Hello, <span class="font-bold block">Sign In / Register</span>
+                    </div>
+
+                    <!-- BOOKINGS LINK -->
+                    <a href="#" class="flex items-center text-gray-700 hover:text-brand-accent transition">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17 18.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.83 0 1.5-.67 1.5-1.5 0-.17-.03-.34-.08-.5L17.17 14H7.39l.64-1.28h9.83c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.997.997 0 0022 4H5.21L4.25 2H1zm15 16.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                        <span class="hidden sm:block pt-1">Bookings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Secondary Navigation (Highlighting Global Partners) -->
+        <div class="bg-gray-50 text-gray-700 text-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-start overflow-x-auto">
+                <nav class="flex space-x-6 sm:space-x-8 font-medium whitespace-nowrap">
+                    <a href="Home.html" class="hover:text-brand-accent transition duration-150">Home</a>
+                    <a href="Shop All Tours.html" class="flex items-center hover:text-brand-accent transition duration-150">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        Shop All Tours
+                    </a>
+                    <a href="Hot Deals.html" class="hover:text-brand-accent transition duration-150">Hot Deals</a>
+                    <a href="Custom.html" class="hover:text-brand-accent transition duration-150">Custom Packages</a>
+                    <a href="Honey.html" class="hover:text-brand-accent transition duration-150">Honeymoon Specials</a>
+                    <a href="Visa.html" class="hover:text-brand-accent transition duration-150">Visa Services</a>
+                    <a href="Insurance.html" class="hover:text-brand-accent transition duration-150">Travel Insurance</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">
+                Our <span class="brand-accent">Global Network</span> of Excellence
+            </h1>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                Our success is built on strong partnerships. We collaborate with the best in the industry—from local tour operators to major advertisers—to bring you unforgettable travel experiences.
+            </p>
+        </div>
+
+        <!-- Counter Section: Tour and Affiliate Partners -->
+        <section class="counter-section rounded-2xl p-8 sm:p-12 mb-12 shadow-xl border border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">The Power of Partnership</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- 1. Our Tour Partners (500+) -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md partner-card border border-gray-100">
+                    <div class="flex items-center justify-center mb-4">
+                        <svg class="w-16 h-16 brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5m-5 0v-5m0 5l-1.33-1.33C19.78 18 20 16.5 20 15c0-3.31-2.69-6-6-6s-6 2.69-6 6c0 3.31 2.69 6 6 6h1.5l1.5 1.5V18zM14 17h-1m2 0h-1m-4 0h-1m2-4h-1m2 0h-1m-4 0h-1"/></svg>
+                    </div>
+                    <p class="text-4xl sm:text-6xl font-extrabold brand-accent mb-2" id="tourPartnerCount">0</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Verified Tour Partners</h3>
+                    <p class="text-gray-600 text-sm">More than 500 ground operators delivering local expertise and quality experiences in 100+ countries.</p>
+                </div>
+
+                <!-- 2. Our Affiliate Programmers (50+) -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md partner-card border border-gray-100">
+                    <div class="flex items-center justify-center mb-4">
+                        <svg class="w-16 h-16 brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <p class="text-4xl sm:text-6xl font-extrabold brand-accent mb-2" id="affiliatePartnerCount">0</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Active Affiliate Marketers</h3>
+                    <p class="text-gray-600 text-sm">A rapidly growing community of 50+ travel bloggers, agencies, and content creators promoting our tours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Our Advertisers & Brand Promotion -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Advertisers and Media Presence</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <p class="text-lg text-gray-700 mb-4">
+                            We collaborate with key advertisers to ensure our travel packages reach the right audience worldwide. Our advertising partners benefit from highly targeted campaigns reaching millions of active travelers.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 pl-4">
+                            <li><span class="font-semibold">Prime Ad Placements:</span> Featured slots on high-traffic pages and within personalized email campaigns.</li>
+                            <li><span class="font-semibold">Exclusive Reach:</span> Access to a global customer base actively seeking travel and leisure products.</li>
+                            <li><span class="font-semibold">Integrated Branding:</span> Opportunities for seamless integration with our custom tour packages and promotions.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1 text-center">
+                        <!-- Placeholder for Advertiser Logo or CTA -->
+                        <div class="p-6 bg-gray-50 rounded-xl border-2 border-dashed border-gray-300">
+                            <h4 class="font-bold text-gray-800 mb-2">Ready to Advertise?</h4>
+                            <p class="text-sm text-gray-500 mb-4">Elevate your brand with us.</p>
+                            <a href="#" class="inline-block py-2 px-6 bg-brand-accent text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300 shadow-md">
+                                Contact Our Media Team
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA to Join Our Network -->
+        <section class="bg-gray-900 text-white rounded-2xl p-10 text-center shadow-2xl">
+            <h2 class="text-3xl font-bold mb-3">Join the TOUR BAZAR 24X7 Partnership Network</h2>
+            <p class="text-gray-300 mb-6 max-w-3xl mx-auto">
+                Whether you're a local guide, a digital content creator, or a major brand, let's explore how we can grow together.
+            </p>
+            <a href="#" class="inline-block py-3 px-10 bg-brand-accent text-white text-lg font-bold rounded-full hover:bg-yellow-600 transition duration-300 shadow-lg">
+                Start a Conversation
+            </a>
+        </section>
+
+    </main>
+    <!-- END OF MAIN CONTENT -->
+
+    <!-- Footer (Standardized - Same as other pages) -->
+    <footer class="bg-gray-800 text-white pt-10 pb-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Get to Know Us</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">About TOUR BAZAR</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">24X7 Support</a></li>
+                        <li><a href="Get to know us.html" class="hover:text-brand-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Help & Support</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Booking.html" class="hover:text-brand-accent">Your Bookings</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">Cancellation Policy</a></li>
+                        <li><a href="FAQ.html" class="hover:text-brand-accent">FAQ & Guides</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Global Partners</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Affiliate Program</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Sell Your Tours</a></li>
+                        <li><a href="Partners.html" class="hover:text-brand-accent">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Payment Methods</h4>
+                    <ul class="space-y-1 text-gray-300">
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Credit/Debit Cards</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">Net Banking</a></li>
+                        <li><a href="Payments.html" class="hover:text-brand-accent">UPI & Wallets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-500">&copy; 2024 TOUR BAZAR 24X7. All rights reserved. | E-commerce Style Travel.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Function to create the simple counting effect on load.
+         * The count stops once it reaches the target number.
+         * @param {string} elementId - The ID of the HTML element to update.
+         * @param {number} targetCount - The final number to display.
+         * @param {number} duration - Duration of the animation in milliseconds.
+         */
+        function animateCounter(elementId, targetCount, duration) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentCount = Math.floor(progress * targetCount);
+                element.textContent = currentCount.toLocaleString();
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    // Ensure the final number is correct, especially for large numbers
+                    element.textContent = targetCount.toLocaleString() + '+';
+                }
+            };
+
+            window.requestAnimationFrame(step);
+        }
+
+        // Wait until the window loads to ensure all elements are present
+        window.onload = function() {
+            // Animate Tour Partners to 500+ (Target: 501 for visual) over 2 seconds
+            animateCounter('tourPartnerCount', 501, 2000);
+
+            // Animate Affiliate Programmers to 50+ (Target: 51 for visual) over 1.5 seconds
+            animateCounter('affiliatePartnerCount', 51, 1500);
+        };
+    </script>
+</body>
+</html>
